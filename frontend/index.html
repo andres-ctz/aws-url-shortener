@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acorta tus enlaces de forma rápida y sencilla.">
+    <title>LinkShort - Acortador de enlaces</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <h1>Link<span>Short</span></h1>
+            <p>Enlaces largos, soluciones cortas.</p>
+        </header>
+
+        <section class="shortener-card">
+
+            <h2>Acorta tu enlace</h2>
+            <p class="description">
+                Pega tu URL y genera un enlace corto en segundos.
+            </p>
+
+            <form id="shorten-form">
+
+                <label for="original-url">URL original</label>
+
+                <input
+                    type="url"
+                    id="original-url"
+                    placeholder="https://ejemplo.com/mi-enlace"
+                    required
+                >
+
+                <button type="submit" id="shorten-button">
+                    Acortar enlace
+                </button>
+
+            </form>
+
+            <p id="message" class="message"></p>
+
+            <div id="result" class="result hidden">
+
+                <label>Tu enlace corto:</label>
+
+                <div class="result-content">
+                    <a id="short-url" href="#" target="_blank"></a>
+
+                    <button type="button" id="copy-button">
+                        Copiar
+                    </button>
+                </div>
+
+                <div class="original-info">
+                    <span>URL original:</span>
+                    <a id="original-link" href="#" target="_blank"></a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Desarrollado con FastAPI, Amazon DynamoDB y Amazon S3.</p>
+        </footer>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -13,6 +13,7 @@ from backend.app.models import (
 )
 
 from backend.app.database import urls_table
+from backend.app.config import BASE_URL
 
 
 app = FastAPI(

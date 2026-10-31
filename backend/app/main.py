@@ -30,6 +30,7 @@ app.add_middleware(
         "http://localhost:5500",
         "http://127.0.0.1:8000",
         "http://localhost:8000",
+        "http://aws-url-shortener-andres-2026.s3-website-us-east-1.amazonaws.com",
     ],
     allow_credentials=False,
     allow_methods=["GET", "POST"],
@@ -61,7 +62,7 @@ def shorten_url(request: ShortenRequest):
         }
     )
 
-    short_url = f"http://127.0.0.1:8000/{short_code}"
+    short_url = f"{BASE_URL}/{short_code}"
 
     return ShortenResponse(
         short_code=short_code,

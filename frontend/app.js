@@ -1,6 +1,5 @@
 
-// Dirección de nuestra API local
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "http://54.160.217.117";
 
 // Elementos HTML
 const form = document.getElementById("shorten-form");
